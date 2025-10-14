@@ -6,8 +6,8 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    console.log("Theme changed to:", theme);
-    console.log("HTML classes before:", document.documentElement.className);
+    // console.log("Theme changed to:", theme);
+    // console.log("HTML classes before:", document.documentElement.className);
 
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -15,13 +15,13 @@ export const ThemeProvider = ({ children }) => {
       document.documentElement.classList.remove("dark");
     }
 
-    console.log("HTML classes after:", document.documentElement.className);
+    // console.log("HTML classes after:", document.documentElement.className);
   }, [theme]);
 
   const toggleTheme = () => {
     setTheme((prev) => {
       const newTheme = prev === "light" ? "dark" : "light";
-      console.log("Toggling to:", newTheme);
+      // console.log("Toggling to:", newTheme);
       return newTheme;
     });
   };
