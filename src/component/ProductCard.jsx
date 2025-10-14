@@ -127,6 +127,23 @@ const ProductCard = () => {
               </button>
             </div>
           </div>
+
+          // <div>
+          //   <table>
+          //     <thead>
+          //       <th>S.N</th>
+          //       <th>Title</th>
+          //       <th>Description</th>
+          //       <th>Price</th>
+          //     </thead>
+          //     <tbody>
+          //       <tr>{product.id}</tr>
+          //       <tr>{product.title}</tr>
+          //       <tr>{product.id}</tr>
+          //       <tr>{product.title}</tr>
+          //     </tbody>
+          //   </table>
+          // </div>
         ))}
       </div>
 
