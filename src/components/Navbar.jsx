@@ -1,42 +1,21 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
+import { searchContext } from "../context/SearchContext";
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  const { search, setSearch } = useContext(searchContext);
   return (
-    <nav className="bg-blue-600 text-white shadow-md">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        <h1
-          className="text-xl font-semibold cursor-pointer"
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          Student Manager
-        </h1>
-        <div className="space-x-2">
-          <NavLink
-            to="/list"
-            className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-sm font-medium ${
-                isActive ? "bg-blue-800 font-bold" : "hover:bg-blue-700"
-              }`
-            }
-          >
-            Student List
-          </NavLink>
-          <NavLink
-            to="/add"
-            className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-sm font-medium ${
-                isActive ? "bg-blue-800 font-bold" : "hover:bg-blue-700"
-              }`
-            }
-          >
-            Add Student
-          </NavLink>
-        </div>
+    <div className="flex justify-center gap-5 mt-10 border p-4">
+      <div>Home</div>
+      <div>About</div>
+      <div>
+        <input
+          type="text"
+          className="border"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
-    </nav>
+    </div>
   );
 };
 

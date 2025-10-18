@@ -7,13 +7,18 @@ import Timer from "./components/Timer";
 import TitleChanger from "./components/TitleChanger";
 import Products from "./components/Products";
 import ProductCard from "./component/ProductCard";
+import SimpleModal from "./component/SimpleModal";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div>
-      <ProductCard />
+      {/* <ProductCard />
+      <SimpleModal /> */}
+      <Navbar />
+      <Products />
     </div>
   );
 };
